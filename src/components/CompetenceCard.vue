@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const _props = defineProps(['competence'])
+import type { Competence } from '@/types/competence'
+const _props = defineProps<{ competence: Competence }>()
 </script>
 <template>
   <div v-if="competence.Level" class="card bg-base-100 w-48 shadow-sm">
