@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, watch, watchEffect } from 'vue'
-const _props = defineProps(['defaultTicketNumber', 'visible'])
+const _props = defineProps<{ defaultTicketNumber: number; visible: boolean }>()
 
 const _flight = ref({
   City: '',
