@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import type { Competence } from '@/types/competence'
-const _props = defineProps<{ competence: Competence }>()
+import InfoCard from './InfoCard.vue'
+import type { InfoModel } from '@/types/InfoModel'
+defineProps<{ competence: InfoModel }>()
+
+const _emit = defineEmits<{
+  modified: [addedCompetence: InfoModel]
+  deleted: [deletedCompetence: InfoModel]
+}>()
 </script>
+
 <template>
-  <div v-if="competence.Level" class="card bg-base-100 w-48 shadow-sm">
-    <h2 class="text-center text-xl uppercase">{{ competence.Name }}</h2>
-    <img :src="`assets/${competence.Picture}`" />
-    <div class="card-body">
-      <p :class="[competence.Level < 3 ? 'text-red-500' : competence.Level > 3 ? 'text-green-500' : '']">Poziom: {{ competence.Level }}</p>
-      <p v-if="competence.Description">Opis: {{ competence.Description }}</p>
-    </div>
-  </div>
+  <InfoCard :info="competence" @modified="(competence) => _emit('modified', competence)" @deleted="(competence) => _emit('deleted', competence)" />
 </template>
+
 <style scoped></style>

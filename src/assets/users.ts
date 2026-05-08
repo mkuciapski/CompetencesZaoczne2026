@@ -1,5 +1,7 @@
 export const users = [
-  { Name: '<b>John Doe</b>', Age: 30 },
-  { Name: '<b>Andy Lis</b>', Age: 55 },
-  { Name: '<b>Donald Kaczyński</b>', Age: 44 },
+  { Name: 'mkuciapski', Score: 80 },
+  { Name: 'jjednorowicz', Score: 50 },
+  { Name: 'rmarcinkowski', Score: 40 },
+  { Name: 'mglazer', Score: 60 },
 ]
+// export {users}

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import CompetencesView from '../views/CompetencesView.vue'
+import CompetenciesView from '../views/CompetenciesView.vue'
 import TempView from '@/views/TempView.vue'
 
 const router = createRouter({
@@ -7,8 +7,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'competences',
-      component: CompetencesView,
+      name: 'competencies',
+      component: CompetenciesView,
     },
     {
       path: '/temp',
